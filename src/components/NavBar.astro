@@ -1,0 +1,42 @@
+<nav class="bg-white border-b border-gray-200 px-6 py-4">
+  <div class="flex justify-between items-center">
+    <!-- Logo -->
+    <img src="/images/logo.svg" alt="Logo Peluquería" class="h-8 lg:h-12 w-auto"/>
+
+    <!-- Botón hamburguesa -->
+    <div class="lg:hidden">
+      <button
+        id="menu-btn"
+        class="text-gray-600 hover:text-gray-900 focus:outline-none"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Menú en pantallas grandes -->
+    <div class="hidden lg:flex space-x-8">
+      <a href="#" class="text-gray-600 hover:text-gray-900">Inicio</a>
+      <a href="#servicios" class="text-gray-600 hover:text-gray-900">Servicios</a>
+      <a href="#contacto" class="text-gray-600 hover:text-gray-900">Contacto</a>
+    </div>
+  </div>
+
+  <!-- Menú desplegable en pantallas pequeñas -->
+  <div id="mobile-menu" class="hidden mt-4">
+    <a href="#" class="block text-gray-600 hover:text-gray-900 mb-2">Inicio</a>
+    <a href="#servicios" class="block text-gray-600 hover:text-gray-900 mb-2">Servicios</a>
+    <a href="#contacto" class="block text-gray-600 hover:text-gray-900">Contacto</a>
+  </div>
+</nav>
+
+
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
